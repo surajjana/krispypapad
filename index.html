@@ -39,12 +39,12 @@
         <div class="mailing-list">
           <h3 class="mailing-list-heading">Join our mailing list and we will notify you once it is ready!</h3>
           <div class="row">
-            <form class="form-inline">
+            <form class="form-inline" action="log.php" method="post" >
               <div class="form-group">
                 <label for="email" class="sr-only"></label>
-                <input type="email" placeholder="jane.doe@example.com" id="email" class="form-control transparent">
+                <input type="email" placeholder="jane.doe@example.com" id="email" name="email" class="form-control transparent">
               </div>
-              <button class="btn btn-danger">subscribe</button>
+              <button class="btn btn-danger" type="submit">subscribe</button>
             </form>
           </div>
         </div>

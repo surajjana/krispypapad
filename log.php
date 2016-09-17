@@ -1,9 +1,28 @@
+<?php  
+$email = $_POST['email'];
+$time = time();
+$con=mysqli_connect("localhost","root","hack123","krispypapad");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+// Perform queries
+mysqli_query($con,"SELECT * FROM Persons");
+mysqli_query($con,"INSERT INTO notify (id,email,time_stamp)
+VALUES ('','$email','$time')");
+
+mysqli_close($con);
+
+?>
+
 <!DOCTYPE html>
 <html class="no-js">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Comming Soon Bootstrap Landing Page</title>
+    <title>Krispypapad.xyz</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -24,33 +43,30 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
-    <div style="background-image: url('img/paris.jpg')" class="main"> 
+    <div style="background-image: url('img/video-bg.jpg')" class="main"> 
+      <!-- video background-->
+      <!-- replace URLs with your video content URL-->
+      <video id="video-background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+        <source src="http://ondrejsvestka.cz/video/silver-lining-video.webm" type="video/webm">
+        <source src="http://ondrejsvestka.cz/video/silver-lining-video.mp4" type="video/mp4">
+      </video>
       <div class="overlay"></div>
       <div class="container">
         <p class="social"><a href="#" title="" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" title="" class="twitter"><i class="fa fa-twitter"></i></a><a href="#" title="" class="gplus"><i class="fa fa-google-plus"></i></a><a href="#" title="" class="instagram"><i class="fa fa-instagram"></i></a></p>
-        <h1 class="cursive">Beautiful comming soon template</h1>
-        <h2 class="sub">You can expect this beautiful website running soon. </h2>
+        <h1 class="cursive">Krispypapad.xyz</h1>
+        <h2 class="sub">Coming Soon!</h2>
         <div class="mailing-list">
-          <h3 class="mailing-list-heading">Join our mailing list and we will notify you once it is ready!</h3>
-          <div class="row">
-            <form class="form-inline">
-              <div class="form-group">
-                <label for="email" class="sr-only"></label>
-                <input type="email" placeholder="jane.doe@example.com" id="email" class="form-control transparent">
-              </div>
-              <button class="btn btn-danger">subscribe </button>
-            </form>
-          </div>
+          <h3 class="mailing-list-heading">Thank you for showing interest in us. We will notify you once it is ready!</h3>
         </div>
       </div>
       <div class="footer">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
-              <p>&copy;2015 Your name/company goes here</p>
+              <p></p>
             </div>
             <div class="col-md-6">
-              <p class="credit">Made by <a href="http://bootstrapious.com">Bootstrapious</a><br />with support from <a href="https://kakusei.cz">Kakusei</a></p>
+              <p class="credit"></p>
             </div>
           </div>
         </div>

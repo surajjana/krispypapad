@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <head><title> API </title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            
+        $.ajax({
+        url: 'http://crm.krispypapad.xyz/articles',
+        dataType: 'text',
+        success: function(data){
+            var obj = JSON.parse(data);
+            
+            for(var i=0; i<= obj.length; i++)
+           {
+            var status = obj[i].status;
+            var source_name = obj[i].source_name;
+            var powered_by = obj[i].powered_by;
+            var tags = obj[i].tags;
+            var image = obj[i].image;
+            var title = obj[i].title;
+            var shares = obj[i].shares;
+            var id = obj[i].id;
+            var likes = obj[i].likes;
+            var content_1 = obj[i].content_1;
+            var time_stamp = obj[i].time_stamp;
+            var author = obj[i].author;
+        //    var id = obj._id[i].$oid;
+            var _id = obj[i]._id.$oid;          
+            var original_link = obj[i].original_link;
+            var conntent_2 = obj[i].content_2;
+            
+                $('.article').append(title + "<br>");
+    
+                timeStamp_value = 1478013386.09099;
+             var theDate = new Date(timeStamp_value * 1000);
+            dateString = theDate.toGMTString();
+            alert(dateString );
+           }
+        }
+        }); 
+    });
+    </script>
+    </head>     
+    <body>
+        <div class="ju">
+           <center> 
+          <h1>Say Hello to API !!</h1>
+          <p>reach out its buddies jQuery & AJAX !</p>
+          </center>
+        </div>
+        <div class="container">
+            <div class="article">
+                <br>
+            </div>    
+        </div>
+        <div style="background-color: #eee; padding: 20px; text-align: center; font-family: monospace;"> Visit Again !!</div>
+    </body>
+</html>

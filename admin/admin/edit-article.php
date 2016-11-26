@@ -61,7 +61,7 @@
 	    $("#loading").show();
 	    var getid = "<?php echo $_GET["id"] ?>";
 	    $.ajax({
-	    url: "http://crm.krispypapad.xyz/articles/"+getid,
+	    url: "https://krispypapad.com:8000/articles/"+getid,
 	    dataType: 'text',
 	    success: function(data){
 		var obj = JSON.parse(data);
@@ -242,7 +242,7 @@
 		dataType: "json",
 		data :jsonData,
 		contentType: "application/json",
-		url: 'http://crm.krispypapad.com/update',
+		url: 'https://krispypapad.com:8000/update',
 		success: function(data){
 		    alert("Updated successfully");
 		}

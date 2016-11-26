@@ -101,7 +101,7 @@
 	    $("#loading").show();
 	    
 	    $.ajax({
-	    url: 'http://crm.krispypapad.xyz/articles',
+	    url: 'https://krispypapad.com:8000/articles',
 	    dataType: 'text',
 	    success: function(data){
 		var obj = JSON.parse(data);

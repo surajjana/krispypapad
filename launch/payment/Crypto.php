@@ -63,6 +63,8 @@
 		    $count+=2; 
         	} 
   	        return $binString; 
-    	  } 
+    }
+
+    /*echo encrypt('Suraj', '7D9D1B56365DC282F2F83E8B1C9D4A04'); */
 ?>
 

@@ -19,7 +19,10 @@
 		$merchant_data.=$key.'='.$value.'&';
 	}
 
-	$encrypted_data=encrypt($merchant_data,$working_key); // Method for encrypting the data.
+
+	$encrypted_data = encrypt($merchant_data,$working_key); // Method for encrypting the data.
+
+	/*echo $encrypted_data;*/
 
 ?>
 

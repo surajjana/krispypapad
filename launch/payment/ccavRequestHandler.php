@@ -5,8 +5,9 @@
 <body>
 <center>
 
-<?php include('Crypto.php')?>
 <?php 
+
+	include('Crypto.php');
 
 	error_reporting(0);
 	
@@ -21,6 +22,7 @@
 	$encrypted_data=encrypt($merchant_data,$working_key); // Method for encrypting the data.
 
 ?>
+
 <form method="post" name="redirect" action="https://test.ccavenue.com/transaction/transaction.do?command=initiateTransaction"> 
 <?php
 echo "<input type=hidden name=encRequest value=$encrypted_data>";
